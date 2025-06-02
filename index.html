@@ -1,1 +1,193 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #1a1a1a;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .profile-pic {
+      flex: 0 0 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img.profile {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .contact {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .contact a{
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .content a{
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+
+    /* .content :hover {
+      color: #b0afaf; 
+    } */
+
+    .cv-button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: linear-gradient(135deg, #535353, #757575);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(182, 182, 182, 0.3);
+    }
+
+    .cv-button:hover {
+      box-shadow: 0 0 15px rgba(182, 182, 182, 0.3);
+      transform: translateY(-1px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: #dfdfdf;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.4rem;
+    }
+
+    section {
+      margin-top: 1.5rem;
+    }
+
+    .paper {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      border-left: 4px solid #b8b8b8;
+      background: #222;
+      border-radius: 8px;
+    }
+
+    .paper strong {
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+
+    .paper a {
+      display: inline-block;
+      margin-top: 0.4rem;
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+
+    .paper a:hover {
+      color: #b0afaf;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-pic, .content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-pic">
+      <img src="julia.jpg" alt="Julia Gschwind" class="profile" />
+      <div class="contact">
+        <h2>Contact </h2>
+          <p>
+            <a href="mailto:jgschwind@ethz.ch">jgschwind@ethz.ch</a><br />
+            <a href="https://www.linkedin.com/in/julia-gschwind-783a9b215/" target="_blank">linkedin.com/in/juliagschwind</a>
+          </p>
+        <a href="cv.pdf" download class="cv-button">⬇ Download CV</a>
+
+      </div>
+    </div>
+    <div class="content">
+      <h1>Julia Gschwind</h1>
+
+      <section>
+        <h2>Education 📚</h2>
+        <p>
+          I am in the last year of the Computer Science MSc programme at ETH Zurich. Currently, I am completing my Master's thesis at the University of Cambridge supervised by Prof. Srinivasan Keshav.
+        </p>
+      </section>
+
+      <section>
+        <h2>Interests 🌍</h2>
+          <p>During my studies, I focus on Machine Learning and Visual Computing, with a strong motivation to apply these technologies to real-world environmental challenges. I am particularly passionate about contributing to projects that support the energy transition and promote sustainable practices.</p>
+      </section>
+
+      <section>
+        <h2>Current Work 👩🏽‍💻</h2>
+          <p>Currently, I am developing neural networks that predict the optimal size of photovoltaic systems for households, both with and without electric vehicles. Additionally, I am working on models that determine the best placement of solar panels based on roof characteristics such as tilt, orientation, and shading to maximize efficiency.        </p>
+      </section>
+
+      <section>
+        <h2>Research 🧐</h2>
+        <div class="paper">
+          <strong>Fast Optimal Sizing of Domestic PV Energy Systems</strong>
+          <a href="https://doi.org/10.1145/3679240.3734690" target="_blank">📄 Paper</a>
+          <a href="http://github.com/juliagsch/PV_Battery_Sizing" target="_blank">💻 GitHub</a>
+        </div>
+
+        <div class="paper">
+          <strong>The Development of a Smart Kitchen Cabinet in Order to Reduce Food Waste</strong>
+          <a href="https://inspiration.sjf.ch/the-development-of-a-smart-kitchen-cabinet-in-order-to-reduce-food-waste/" target="_blank">📄 Summary</a>
+          <a href="https://www.youtube.com/watch?v=aXfYMK4muvE" target="_blank">🎥 Demo</a>
+        </div>
+      </section>
+      
+    </div>
+  </div>
+</body>
+</html>
