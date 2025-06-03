@@ -98,8 +98,15 @@
       padding-bottom: 0.4rem;
     }
 
-    section {
+    .section {
       margin-top: 1.5rem;
+      color: #c7c7c7;
+
+    }
+
+    .section a{
+      color: #ffffff;
+      font-style:oblique;
     }
 
     .paper {
@@ -135,6 +142,10 @@
       .profile-pic, .content {
         width: 100%;
       }
+
+      img.profile {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -145,8 +156,8 @@
       <div class="contact">
         <h2>Contact </h2>
           <p>
-            <a href="mailto:jgschwind@ethz.ch">jgschwind@ethz.ch</a><br />
-            <a href="https://www.linkedin.com/in/julia-gschwind-783a9b215/" target="_blank">linkedin.com/in/juliagschwind</a>
+            Email: <a href="mailto:jgschwind@ethz.ch">jgschwind@ethz.ch</a><br />
+            Linkedin: <a href="https://www.linkedin.com/in/julia-gschwind-783a9b215/" target="_blank">juliagschwind</a>
           </p>
         <a href="cv.pdf" download class="cv-button">⬇ Download CV</a>
 
@@ -155,24 +166,24 @@
     <div class="content">
       <h1>Julia Gschwind</h1>
 
-      <section>
+      <div class="section">
         <h2>Education 📚</h2>
         <p>
-          I am in the last year of the Computer Science MSc programme at ETH Zurich. Currently, I am completing my Master's thesis at the University of Cambridge supervised by Prof. Srinivasan Keshav.
+          I am in the last year of the Computer Science MSc programme at ETH Zurich. Currently, I am completing my Master's thesis at the <a href="https://www.cst.cam.ac.uk/research/eeg">Energy and Environment Group</a> (University of Cambridge) supervised by <a href="https://svr-sk818-web.cl.cam.ac.uk/keshav/wiki/index.php/Main_Page">Prof. Srinivasan Keshav</a>.
         </p>
-      </section>
+      </div>
 
-      <section>
+      <div class="section">
         <h2>Interests 🌍</h2>
-          <p>During my studies, I focus on Machine Learning and Visual Computing, with a strong motivation to apply these technologies to real-world environmental challenges. I am particularly passionate about contributing to projects that support the energy transition and promote sustainable practices.</p>
-      </section>
+          <p>During my studies, I focus on Machine Learning and Visual Computing, with a motivation to apply these technologies to environmental challenges. I am particularly passionate about contributing to projects that support the energy transition and promote sustainable practices.</p>
+      </div>
 
-      <section>
+      <div class="section">
         <h2>Current Work 👩🏽‍💻</h2>
           <p>Currently, I am developing neural networks that predict the optimal size of photovoltaic systems for households, both with and without electric vehicles. Additionally, I am working on models that determine the best placement of solar panels based on roof characteristics such as tilt, orientation, and shading to maximize efficiency.        </p>
-      </section>
+      </div>
 
-      <section>
+      <div class="section">
         <h2>Research 🧐</h2>
         <div class="paper">
           <strong>Fast Optimal Sizing of Domestic PV Energy Systems</strong>
@@ -185,7 +196,7 @@
           <a href="https://inspiration.sjf.ch/the-development-of-a-smart-kitchen-cabinet-in-order-to-reduce-food-waste/" target="_blank">📄 Summary</a>
           <a href="https://www.youtube.com/watch?v=aXfYMK4muvE" target="_blank">🎥 Demo</a>
         </div>
-      </section>
+      </div>
       
     </div>
   </div>
