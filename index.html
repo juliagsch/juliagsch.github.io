@@ -3,134 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
+  <title>Julia Gschwind – About Me</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #0f0f0f;
-      color: #e0e0e0;
+      background-color: #63634c;
+      color: #eae7dc;
       margin: 0;
       padding: 0;
     }
 
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 3rem auto;
       padding: 2rem;
-      background: #1a1a1a;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
-      border-radius: 15px;
+      background-color: #4e4e3a;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: row;
       gap: 2rem;
-      align-items: flex-start;
     }
+
+    .footer {
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    .logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-logo {
+      height: 60px; 
+      max-width: 140px;
+      object-fit: contain;
+    }
+
 
     .profile-pic {
       flex: 0 0 220px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     img.profile {
       width: 100%;
-      border-radius: 12px;
-    }
-
-    .contact {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-    }
-
-    .contact a{
-      color: #e0e0e0;
-      text-decoration: none;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid #a69f79;
     }
 
     .content {
       flex: 1;
     }
 
-    .content a{
-      color: #e0e0e0;
-      text-decoration: none;
-    }
-
-    /* .content :hover {
-      color: #b0afaf; 
-    } */
-
-    .cv-button {
-      margin-top: 1rem;
-      padding: 0.6rem 1.5rem;
-      background: linear-gradient(135deg, #535353, #757575);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: box-shadow 0.3s ease, transform 0.2s ease;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(182, 182, 182, 0.3);
-    }
-
-    .cv-button:hover {
-      box-shadow: 0 0 15px rgba(182, 182, 182, 0.3);
-      transform: translateY(-1px);
-    }
-
     h1 {
       font-size: 2rem;
-      margin-top: 0;
-      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #f4f1e8;
     }
 
     h2 {
+      font-size: 1.2rem;
       margin-top: 2rem;
-      color: #dfdfdf;
-      border-bottom: 1px solid #333;
-      padding-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #bdb78f;
+      padding-bottom: 0.3rem;
+      font-weight: 500;
+      color: #eae7dc;
     }
 
     .section {
-      margin-top: 1.5rem;
-      color: #c7c7c7;
-
+      margin-top: 1rem;
+      line-height: 1.6;
     }
 
-    .section a{
-      color: #ffffff;
-      font-style:oblique;
+    .section a {
+      color: #d7d3b7;
+      text-decoration: none;
+    }
+
+    .section a:hover {
+      text-decoration: underline;
     }
 
     .paper {
       margin-top: 1rem;
-      padding: 0.8rem;
-      border-left: 4px solid #b8b8b8;
-      background: #222;
-      border-radius: 8px;
+      padding: 1rem;
+      background: #5e5e45;
+      border-left: 4px solid #c5be92;
+      border-radius: 6px;
     }
 
     .paper strong {
-      font-size: 1rem;
-      color: #e0e0e0;
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #f4f1e8;
     }
 
     .paper a {
       display: inline-block;
-      margin-top: 0.4rem;
-      color: #e0e0e0;
-      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 0.95rem;
+      color: #d7d3b7;
     }
 
     .paper a:hover {
-      color: #b0afaf;
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-bottom {
+      display: none;
+    }
+
+    .contact a {
+      color: #dcd8bb;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .center-container {
+      text-align: center;
+    } 
+    .cv-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #807a5c;
+      color: #2f2f1c;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .cv-button:hover {
+      background-color: #c5be92;
     }
 
     @media (max-width: 700px) {
@@ -139,13 +161,13 @@
         align-items: center;
       }
 
-      .profile-pic, .content {
-        width: 100%;
+      .contact-bottom {
+        display: block;
       }
 
-      img.profile {
+       .profile-pic {
         display: none;
-      }
+       }
     }
   </style>
 </head>
@@ -154,50 +176,98 @@
     <div class="profile-pic">
       <img src="julia.jpg" alt="Julia Gschwind" class="profile" />
       <div class="contact">
-        <h2>Contact </h2>
-          <p>
-            Email: <a href="mailto:jgschwind@ethz.ch">jgschwind@ethz.ch</a><br />
-            Linkedin: <a href="https://www.linkedin.com/in/julia-gschwind-783a9b215/" target="_blank">Julia Gschwind</a>
-          </p>
-        <a href="cv.pdf" download class="cv-button">⬇ Download CV</a>
-
+        <div class="center-container">
+          <h2>Contact</h2>
+        </div>
+        <p>Email: <a href="mailto:jgschwind@ethz.ch">jgschwind@ethz.ch</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/julia-gschwind-783a9b215/" target="_blank">Julia Gschwind</a></p>
+        <div class="center-container">
+          <a href="cv.pdf" class="cv-button" download>Download CV</a>
+        </div>
       </div>
     </div>
     <div class="content">
       <h1>Julia Gschwind</h1>
 
       <div class="section">
-        <h2>Education 📚</h2>
-        <p>
-          I am in the last year of the Computer Science MSc programme at ETH Zurich. Currently, I am completing my Master's thesis at the <a href="https://www.cst.cam.ac.uk/research/eeg">Energy and Environment Group</a> (University of Cambridge) supervised by <a href="https://svr-sk818-web.cl.cam.ac.uk/keshav/wiki/index.php/Main_Page">Prof. Srinivasan Keshav</a>.
-        </p>
+        <h2>Education</h2>
+        <p>I am in the final year of the MSc in Computer Science at ETH Zurich. My Master's thesis is conducted at the <a href="https://www.cst.cam.ac.uk/research/eeg" target="_blank">Energy and Environment Group</a> at the University of Cambridge, supervised by <a href="https://svr-sk818-web.cl.cam.ac.uk/keshav/wiki/index.php/Main_Page" target="_blank">Prof. Srinivasan Keshav</a>.</p>
       </div>
 
       <div class="section">
-        <h2>Interests 🌍</h2>
-          <p>During my studies, I focus on Machine Learning and Visual Computing, with a motivation to apply these technologies to environmental challenges. I am particularly passionate about contributing to projects that support the energy transition and promote sustainable practices.</p>
+        <h2>Research Interests</h2>
+        <p>My academic focus is on Machine Learning and Visual Computing, with a strong interest in their application to environmental challenges. I am particularly driven by work that contributes to the energy transition and promotes sustainable systems.</p>
       </div>
 
       <div class="section">
-        <h2>Current Work 👩🏽‍💻</h2>
-          <p>Currently, I am developing neural networks that predict the optimal size of photovoltaic systems for households, both with and without electric vehicles. Additionally, I am working on models that determine the best placement of solar panels based on roof characteristics such as tilt, orientation, and shading to maximize efficiency.        </p>
-      </div>
-
-      <div class="section">
-        <h2>Research 🧐</h2>
+        <h2>Publications</h2>
         <div class="paper">
           <strong>Fast Optimal Sizing of Domestic PV Energy Systems</strong>
-          <a href="https://doi.org/10.1145/3679240.3734690" target="_blank">📄 Paper</a>
-          <a href="http://github.com/juliagsch/PV_Battery_Sizing" target="_blank">💻 GitHub</a>
+          <a href="https://doi.org/10.1145/3679240.3734690" target="_blank">Paper</a>
+          <a href="https://github.com/juliagsch/PV_Battery_Sizing" target="_blank">GitHub</a>
         </div>
 
         <div class="paper">
-          <strong>The Development of a Smart Kitchen Cabinet in Order to Reduce Food Waste</strong>
-          <a href="https://inspiration.sjf.ch/the-development-of-a-smart-kitchen-cabinet-in-order-to-reduce-food-waste/" target="_blank">📄 Summary</a>
-          <a href="https://www.youtube.com/watch?v=aXfYMK4muvE" target="_blank">🎥 Demo</a>
+          <strong>The Development of a Smart Kitchen Cabinet to Reduce Food Waste</strong>
+          <a href="https://inspiration.sjf.ch/the-development-of-a-smart-kitchen-cabinet-in-order-to-reduce-food-waste/" target="_blank">Summary</a>
+          <a href="https://www.youtube.com/watch?v=aXfYMK4muvE" target="_blank">Demo</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+      
+        <div class="paper">
+          <strong>Mar 2025 – Aug 2025 · Visiting Student, University of Cambridge</strong>
+          <ul>
+            <li>Developing neural networks to optimize the sizing of photovoltaic systems for residential settings, both with and without electric vehicles.</li>
+            <li>Modeling optimal solar panel placement based on roof characteristics such as orientation, tilt, and shading.</li>
+          </ul>
+        </div>
+      
+        <div class="paper">
+          <strong>Jun 2024 – Sep 2024 · Software Engineering Intern, Google Switzerland</strong>
+          <p>Contributed to full-stack development within the Google Shopping team, with a primary focus on integrating AI-driven features.</p>
+        </div>
+      
+        <div class="paper">
+          <strong>Sep 2023 – Feb 2024 · Bachelor Thesis Student, Disney Research Studios Zurich</strong>
+          <p>Thesis topic: <em>“Attention for Visual Sound Source Localization”</em><br />
+          Implemented and tested various guide attention mechanisms for transformers.</p>
+        </div>
+      
+        <div class="paper">
+          <strong>Jul 2023 – Sep 2023 · STEP Intern, Google UK</strong>
+          <p>Developed internal tools for Site Reliability Engineers, primarily focused on monitoring and analyzing activity between distributed servers.</p>
+        </div>
+      
+        <div class="paper">
+          <strong>Sep 2021 – Feb 2022 · Teaching Assistant, ETH Zurich</strong>
+          <p>Course: “Introduction to Programming”<br />
+            Responsible for instructing 25 students through weekly exercise sessions and evaluating assignments.</p>
         </div>
       </div>
       
+
+      <div class="contact-bottom">
+        <div class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jgschwind@ethz.ch">jgschwind@ethz.ch</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/julia-gschwind-783a9b215/" target="_blank">Julia Gschwind</a></p>
+        <div class="center-container">
+          <a href="cv.pdf" class="cv-button" download>Download CV</a>
+        </div>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <div class="logo-row">
+          <img src="ETH.png" alt="ETH Logo" class="footer-logo" />
+          <img src="Cambridge.png" alt="Cambridge Logo" class="footer-logo" />
+          <img src="Disney.png" alt="DRZ Logo" class="footer-logo" />
+          <img src="Google.png" alt="Google Logo" class="footer-logo" />
+        </div>
+      </footer>
     </div>
   </div>
 </body>
